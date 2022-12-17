@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TeamUp</title>
+        <style>
+            body {
+                background: linear-gradient(180deg, #0E7DBD, #41A614);
+                font-family: 'Brush Script MT', cursive;
+                font-size: smaller;
+                text-align: center;
+            }
+
+            h2 {
+                color: aliceblue;
+            }
+
+            p {
+                line-height: 1.5;
+                text-align: left;
+            }
+
+            img {
+                /* width: 100%; */
+                max-width: 100%;
+                max-height: 100%;
+                display: block;
+                border-radius: 10px;
+                margin: auto;
+                overflow: auto;
+                position: relative;
+                align-content: center;
+                -o-object-fit: contain;
+                align-self: center;
+                align-items: center;
+                object-fit: contain;
+            }
+
+
+            .title {
+                text-align: center;
+                background-image: linear-gradient(45deg, #0E7DBD, #41A614);
+                color: white;
+                padding: 1px 60px 10px 60px;
+                /* margin: 20px 50px 100px 50px; */
+            }
+
+
+
+            .column {
+                float: left;
+                width: 33%;
+                height: 600px;
+                background-color: transparent;
+            }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .item {
+                font-family: 'Brush Script MT', cursive;
+                font-size: x-small;
+                font-weight: 200
+            }
+
+
+
+            .titles {
+                color: #2c1568;
+                font-size: smaller;
+                display: inline;
+                float: inline-start;
+                justify-content: center;
+                word-break: break-word;
+                text-align: center;
+
+
+            }
+
+            .addresses {
+                font-size: smaller;
+                display: inline;
+                float: none;
+                float: inline-start;
+                justify-content: center;
+                word-break: break-word;
+                text-align: center;
+            }
+
+            ul {
+                list-style-type: none;
+                line-height: 2;
+            }
+
+            .header {
+                font-size: xx-small;
+                text-align: right;
+            }
+
+            button {
+                display: block;
+                float: right;
+                margin: 0 10px 10px 10px;
+                border: 1px solid;
+                border-color: #0c10f1;
+                font-size: 9px;
+                border-width: 1px;
+                padding: 3px 6px;
+                color: #1014e6;
+                text-decoration: dotted;
+                background-color: #0df10d;
+                border-radius: 3px;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+                transition: all 200ms ease-in-out;
+            }
+
+            button:hover {
+                background: #41A614;
+                color: white;
+                cursor: pointer;
+            }
+
+            .learn_more {
+                display: block;
+                text-align: left;
+            }
+
+            a {
+                color: #0c10f1;
+                font-size: smaller;
+            }
+
+            container {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .contact_us {
+                text-align: left;
+            }
+
+            .col_butt_1 {
+                margin: 0 10px 10px 10px;
+                padding: ;
+                border: 1px solid;
+                border-color: #0c501b;
+                font-size: 9px;
+                border-width: 1px;
+                padding: 3px 76px 3px 76px;
+                color: #0c501b;
+                text-decoration: dotted;
+                background-color: white;
+                border-radius: 3px;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+                transition: all 200ms ease-in-out;
+                right: 60px;
+                left: auto;
+                position: static;
+                align-items: center;
+                justify-content: center;
+                display: inline-flexbox;
+            }
+
+            .col_butt_1:hover {
+                background: #107FB6;
+                color: white;
+                cursor: pointer;
+            }
+
+            .col_butt_2 {
+                margin: 0 10px 10px 10px;
+                padding: ;
+                border: 1px solid;
+                border-color: #0c501b;
+                font-size: 9px;
+                border-width: 1px;
+                padding: 3px 76px 3px 76px;
+                color: #0c501b;
+                text-decoration: dotted;
+                background-color: white;
+                border-radius: 3px;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+                transition: all 200ms ease-in-out;
+                right: 60px;
+                left: auto;
+                position: static;
+                align-items: center;
+                justify-content: center;
+                display: inline-flexbox;
+            }
+
+            .col_butt_2:hover {
+                background: #107FB6;
+                color: white;
+                cursor: pointer;
+            }
+
+            .col_butt_3 {
+                /* position: relative; */
+                /* top: 18%;
+                left: 80%; */
+                /* align-items: flex-end; */
+                /* display: block; */
+                /* align-self: flex-end; */
+                /* position: relative; */
+                /* float: right; */
+                /* float: inline-start; */
+                margin: 0 10px 10px 10px;
+                padding: ;
+                border: 1px solid;
+                border-color: #0c501b;
+                font-size: 9px;
+                border-width: 1px;
+                padding: 3px 76px 3px 76px;
+                color: #0c501b;
+                text-decoration: dotted;
+                background-color: white;
+                border-radius: 3px;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+                transition: all 200ms ease-in-out;
+                right: 60px;
+                left: auto;
+                position: static;
+                align-items: center;
+                justify-content: center;
+                display: inline-flexbox;
+
+
+            }
+
+            .col_butt_3:hover {
+                background: #107FB6;
+                color: white;
+                cursor: pointer;
+            }
+
+            .space {
+                margin-top: 300px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <br /><br /><br />
+
+                New member? <a href="teamup.ir/join">Join now </a>
+                <button type="button">Log in</button>
+
+            </div>
+
+
+            <br />
+            <div class="title">
+
+                <h1> TeamUp </h1>
+                <h2> Find Sport Partners</h2>
+                <strong> Become healthier than ever </strong>
+
+
+            </div>
+            <p>
+                <em>Sport </em> pertains to any form of competitive physical activity or game that aims to use,
+                maintain, or
+                improve
+                physical
+                ability and skills while providing enjoyment to participants and, in some cases, entertainment to
+                spectators.<a href="https://en.wikipedia.org/wiki/Sport" class="learn_more">Learn more on wikipedia </a>
+                <hr>
+
+                <!-- <br /> -->
+
+
+            </p>
+
+            <div class="row">
+                <div class="column" style="background-color: linear-gradient(45deg, #0E7DBD, #41A614);">
+                    <img src="https://img.freepik.com/premium-photo/vertical-photo-personal-trainer-man-exercising-with-kettlebell-gym_475667-88.jpg?w=2000"
+                        alt="Personal Training">
+
+
+                    <h2>Personal Training Programs</h2>
+                    <ul>
+                        <li>
+                            <span class="item"> Personal Trainer</span>
+
+
+                        </li>
+                        <li>
+                            <span class="item"> Group Exercise Instructor </span>
+
+
+                        </li>
+                        <li>
+                            <span class="item"> Gym Instructor </span>
+                        </li>
+                    </ul>
+                    <br />
+
+                    <button type="button" class="col_butt_1">Register</button>
+
+                </div>
+                <div class="column" style="background-color: linear-gradient(45deg, #0E7DBD, #41A614) ;">
+                    <img src="   https://gray-wtoc-prod.cdn.arcpublishing.com/resizer/-KOoUyyb9GnuzGrc0Oeip3K9Xm4=/1200x1800/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/7GB6UXBDSFDXHOLMCN3XX5WYTM.jpg 
+                
+                
+            " alt="Team Player">
+
+                    <h2>Team sports</h2>
+                    <ul>
+                        <li>
+                            <span class="item">Be a player</span>
+
+
+                        </li>
+                        <li>
+                            <span class="item">Be a referee </span>
+
+
+                        </li>
+                        <li>
+                            <span class="item">Book stadiums </span>
+                        </li>
+                    </ul>
+                    <br />
+                    <button type="button" class="col_butt_2">Register</button>
+
+                </div>
+
+                <div class="column" style="background-color: linear-gradient(45deg, #0E7DBD, #41A614);">
+                    <img src=" https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Danilovic_RGQ22_%2813%29_%2852129871479%29.jpg/1200px-Danilovic_RGQ22_%2813%29_%2852129871479%29.jpg
+                        " alt="Single Player">
+
+                    <h2>Individual sports </h2>
+                    <ul>
+                        <li>
+                            <span class="item">Find what suits you></span>
+
+
+                        </li>
+                        <li>
+                            <span class="item"> Start immediately</span>
+
+
+                        </li>
+                        <li>
+                            <!-- <div class="item">Start immediately </div> -->
+                            <span class="item"> Book courts</span>
+
+
+                        </li>
+                    </ul>
+                    <br />
+
+                    <button type="button" class="col_butt_3">Register</button>
+
+                </div>
+            </div>
+
+            <div class="space"></div>
+
+
+            <div class="contact_us">
+
+
+                <span class="titles">
+                    Website:
+                </span>
+                <span class="addresses">
+                    teamup.ir
+
+                </span>
+
+                <span class="titles">
+                    Instagram:
+                </span>
+                <span class="addresses">
+                    @TeamUp
+                </span>
+            </div>
+
+
+    </body>
+
+    <div>This page was built by <a href="https://www.linkedin.com/in/zahra-meskar-916b5114b/" class="name">Zahra Meskar
+        </a>
+    </div>
+    </div>
+
+
+    <script>
+
+        function log_in(user_name) {
+
+            currentInfo = document.querySelector("button");
+            currentInfo.innerHTML = "Welcome " + user_name + " !"
+            button.innerHTML = currentInfo
+
+        }
+
+
+
+
+
+        function log_in_op() {
+            let user_name = prompt("What is your name?")
+            // let temperature = prompt("What temperature is it?")
+            if (name.length > 0)
+                log_in(user_name)
+
+        }
+        log_in_button = document.querySelector("button")
+        log_in_button.addEventListener("click", log_in_op)
+
+
+
+        function register(user_name, type) {
+
+            currentInfo = document.querySelector(type);
+            currentInfo.innerHTML = "registered " + user_name
+            type.innerHTML = "registered"
+            alert("Thank you " + user_name + "! we'll be in touch!")
+        }
+
+
+
+
+
+        function register_op_1() {
+            let user_name = prompt("What is your name?")
+            let age = prompt("How old are you?")
+            let city = prompt("where do you live?")
+            // let temperature = prompt("What temperature is it?")
+            register(user_name, ".col_butt_1")
+
+        }
+        function register_op_2() {
+            let user_name = prompt("What is your name?")
+            let age = prompt("How old are you?")
+            let city = prompt("where do you live?")
+            // let temperature = prompt("What temperature is it?")
+            register(user_name, ".col_butt_2")
+
+        }
+        function register_op_3() {
+            // user_name = ""
+            // while (user_name.length == 0) {
+            let user_name = prompt("What is your name?")
+            let age = prompt("How old are you?")
+            if (age < 18) {
+
+                heading = "Sorry, " + user_name + " ! You cannot join TeamUp"
+                alert(heading)
+
+            } else {
+                register(user_name, ".col_butt_3")
+            }
+
+        }
+
+        log_in_button_1 = document.querySelector(".col_butt_1")
+        log_in_button_2 = document.querySelector(".col_butt_2")
+        log_in_button_3 = document.querySelector(".col_butt_3")
+
+        log_in_button_1.addEventListener("click", register_op_1)
+        log_in_button_2.addEventListener("click", register_op_2)
+        log_in_button_3.addEventListener("click", register_op_3)
+
+
+
+
+
+    </script>
+
+</html>
